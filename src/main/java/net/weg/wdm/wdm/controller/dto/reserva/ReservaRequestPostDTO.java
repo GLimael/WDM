@@ -12,7 +12,7 @@ public class ReservaRequestPostDTO {
     private Long idUsuario;
     private Long idTurma;
     private List<Long> idDispositivos;
-    private List<PeriodoReservaCadastroRequestDTO> periodos;
+    private List<PeriodoReservaRequestDTO> periodos;
     private LocalDate inicio;
     private LocalDate fim;
 }

@@ -28,7 +28,7 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TipoUsuario tipo;
-    @OneToMany
+    @OneToMany(mappedBy = "usuario")
     @Column(nullable = false)
     private List<GrupoDispositivo> gruposDispositibos;
 }

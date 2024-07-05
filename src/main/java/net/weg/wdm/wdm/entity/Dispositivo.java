@@ -18,7 +18,7 @@ public class Dispositivo {
     @Column(nullable = false)
     private Long numero;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private TipoDispositivo tipo;
     @Column(nullable = false, length = 20)
     private String marca;

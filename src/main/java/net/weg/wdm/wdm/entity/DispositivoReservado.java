@@ -16,12 +16,12 @@ public class DispositivoReservado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Dispositivo dispositivo;
     private LocalDateTime retirada;
     private LocalDateTime devolucao;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Reserva reserva;
 
 }

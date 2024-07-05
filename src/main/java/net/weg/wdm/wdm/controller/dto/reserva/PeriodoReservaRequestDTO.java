@@ -6,7 +6,7 @@ import net.weg.wdm.wdm.entity.DiaSemana;
 
 @AllArgsConstructor
 @Data
-public class PeriodoReservaCadastroRequestDTO {
+public class PeriodoReservaRequestDTO {
     private Long idPeriodo;
     private Long idAmbiente;
     private DiaSemana diaSemana;

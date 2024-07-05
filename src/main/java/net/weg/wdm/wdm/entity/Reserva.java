@@ -15,7 +15,7 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numero;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Usuario solicitante;
     @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
     private List<DispositivoReservado> dispositivosReservado;
@@ -23,18 +23,18 @@ public class Reserva {
     @Column(nullable = false)
     private StatusReserva status;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Ambiente ambiente;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Turma turma;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private Periodo periodo;
     @Column(nullable = false)
     private LocalDate dia;
     @ManyToOne
-    @Column(nullable = false)
+    @JoinColumn(nullable = false)
     private SolicitacaoReserva solicitacao;
     private String comentario;
 }

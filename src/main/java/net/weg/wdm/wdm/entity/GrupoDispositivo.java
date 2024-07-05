@@ -19,4 +19,6 @@ public class GrupoDispositivo {
     private List<Dispositivo> dispositivos;
     @Column(nullable = false, length = 50)
     private String nome;
+    @ManyToOne
+    private Usuario usuario;
 }
