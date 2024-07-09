@@ -2,7 +2,6 @@ package net.weg.wdm.wdm.controller;
 
 import lombok.AllArgsConstructor;
 import net.weg.wdm.wdm.controller.dto.reserva.ReservaRequestPostDTO;
-import net.weg.wdm.wdm.entity.Reserva;
 import net.weg.wdm.wdm.entity.SolicitacaoReserva;
 import net.weg.wdm.wdm.service.ReservaServiceInt;
 import net.weg.wdm.wdm.service.SolicitacaoReservaServiceInt;
@@ -17,12 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/reserva")
 public class ReservaController {
-    private ReservaServiceInt reservaService;
     private SolicitacaoReservaServiceInt solicitacaoReservaService;
     @PostMapping
     public ResponseEntity<SolicitacaoReserva> cadastroReserva(
             @RequestBody ReservaRequestPostDTO reservaDTO) {
-        return new ResponseEntity<>(solicitacaoReservaService.criarReservas(reservaDTO), HttpStatus.OK);
+        return new ResponseEntity<>(solicitacaoReservaService.criarSolicitacaoReserva(reservaDTO), HttpStatus.OK);
 //        return ResponseEntity.status(200).body(new Reserva());
     }
 }

@@ -1,21 +1,21 @@
 package net.weg.wdm.wdm.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 @Entity
 public class DispositivoReservado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
+    @NonNull
     @JoinColumn(nullable = false)
     private Dispositivo dispositivo;
     private LocalDateTime retirada;

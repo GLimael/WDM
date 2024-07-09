@@ -1,9 +1,9 @@
 package net.weg.wdm.wdm.repository;
 
-import net.weg.wdm.wdm.entity.Ambiente;
+import net.weg.wdm.wdm.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Ambiente, Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 }
