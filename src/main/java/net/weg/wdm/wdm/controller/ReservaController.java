@@ -22,5 +22,6 @@ public class ReservaController {
             @RequestBody ReservaRequestPostDTO reservaDTO) {
         return new ResponseEntity<>(solicitacaoReservaService.criarSolicitacaoReserva(reservaDTO), HttpStatus.OK);
 //        return ResponseEntity.status(200).body(new Reserva());
+//        return ResponseEntity.ok(solicitacaoReservaService.criarSolicitacaoReserva(reservaDTO));
     }
 }

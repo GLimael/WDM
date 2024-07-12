@@ -1,5 +1,6 @@
 package net.weg.wdm.wdm.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,6 +25,7 @@ public class Usuario {
     private Boolean habilitado; //Já vem com valor inicial false
     @OneToMany(mappedBy = "solicitante")
     @Column(nullable = false)
+    @JsonIgnore
     private List<Reserva> reservas;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
