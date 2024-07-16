@@ -7,9 +7,9 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
+@NoArgsConstructor
 @Entity
 public class DispositivoReservado {
     @Id
@@ -21,13 +21,4 @@ public class DispositivoReservado {
     private Dispositivo dispositivo;
     private LocalDateTime retirada;
     private LocalDateTime devolucao;
-    @ManyToOne
-    @NonNull
-    @JoinColumn(nullable = false)
-    @JsonIgnore
-    @ToString.Exclude
-    private Reserva reserva;
-
-    public DispositivoReservado(Dispositivo dispositivo, Reserva reserva) {
-    }
 }
